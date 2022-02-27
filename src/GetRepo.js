@@ -27,7 +27,7 @@ class GetRepo extends React.Component{
       <h1>Loading.. Please wait</h1></div>;
   
     return (
-      <div className = "App"> {
+      <div className = "GetRepo"> {
           items.map((item) => (
             <ol key = { item.id}>
               <h2>{item.name}</h2>,
