@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--JavaScript React-->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--- Font --->
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <title>CV</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Index</a></li>
+                <li><a class="current" href="cv.html">CV</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="CareerGoals.html">Mål</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article class="columns">
+            <h1>Hej, jag heter Freddy!</h1>
+            <h2>Utbildningar</h2>
+            <section class="left-side" id="edu-left">
+            </section>
+            <section class="right-side" id="dates-right">
+            </section>
+            <div class="headline">
+                <h2>Tidigare Erfarenhet</h2>
+            </div>
+            <section class="left-side2" id="location-left">
+            </section>
+            <section class="right-side2" id="dates-exp-right">
+            </section>
+        </article>
+        <button data-modal-target="#modal" hidden>hidden</button>
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title">You found the Easter Egg!</div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                .. The number of the beast!
+            </div>
+        </div>
+        <div id="overlay"></div>
+    </main>
+    <footer class="footer" id="footer" onclick="onClickEasterEgg('blue')">
+        Hello, this is my footer
+    </footer>
+    <script src="/src/AddToCV-script.js" type="text/javascript"></script>
+    <script src="/src/EasterEggScript.js" type="text/javascript"></script>
+</body>
+</html>
