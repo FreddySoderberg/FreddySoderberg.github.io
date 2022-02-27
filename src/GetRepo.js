@@ -40,4 +40,4 @@ class GetRepo extends React.Component{
   }
   }
   
-  ReactDOM.render(<App />, document.getElementById('root-article'));
+  ReactDOM.render(<GetRepo />, document.getElementById('root-article'));
