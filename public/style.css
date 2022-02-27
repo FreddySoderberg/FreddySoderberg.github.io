@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    font-size: small;
+}
+
+ul {
+    padding-left: 4.5vw;
+    padding-right: 4.5vw;
+}
+
+li {
+    top: 1;
+    display: table-cell;
+}
+
+body {
+    min-height: 100%;
+    max-height: 200vh;
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+h1 {
+    font-size: 4vw;
+}
+
+h2 {
+    margin-top: 2vh;
+    font-size: 3vw;
+}
+
+main {
+    padding: 5vw 5vw 5vw 5vw;
+    height: auto;
+}
+
+img{
+    padding-bottom: 30px;
+}
+
+.headline{
+    height: 5vh;
+    display: block;
+}
+
+#footer{
+    clear: both;
+    border: 1px groove #aaaaaa;
+    background: rgb(205, 226, 240);
+    color: black;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    margin: 0;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+/*Menu in header*/
+.menu {
+    display: flex;
+    justify-content: center;
+    top: 0;
+    padding-right: 1vw;
+    padding-left: 1vw;
+}
+
+.menu a {
+    color: black;
+    min-width: 17vw;
+    text-decoration: none;
+    font-size: 3vh;
+    text-align: center;
+    background-color: rgb(205, 226, 240);
+    display:block;
+}
+
+.menu a:hover {
+    background-color: rgb(50, 50, 177);
+    color:white;
+}
+
+.menu .current {
+    background-color: rgb(50, 50, 177);
+    color:white;
+}
+
+/*Columns*/
+
+section{
+    height: 25vh;
+    width: 40%;
+    padding: 5%;
+}
+
+.left-side {
+    padding: 2.5vw;
+    display: block;
+    float: left;
+    width: 48%;
+    text-align: right;
+}
+
+.left-side2{
+    padding: 2.5vw;
+    display: block;
+    float: left;
+    width: 48%;
+    text-align: right;
+}
+
+.left-side h2, p {
+    font-size: 2.5vw;
+}
+
+.right-side {
+    padding: 2.5vw;
+    flex: 50%;
+    float: right;
+    display: block;
+    width: 48%;
+    text-align: left;
+}
+
+.right-side2{
+    padding: 2.5vw;
+    flex: 50%;
+    float: right;
+    display: block;
+    width: 48%;
+    text-align: left;
+}
+
+.right-side h2{
+    font-size: 3vw;
+}
+
+.right-side:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Modal Popup*/
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+  .modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    padding: 10px 15px;
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+.modal-window {
+    position: fixed;
+    background-color: rgba(200, 200, 200, 0.75);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-window:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+  
+.modal-window > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 2rem;
+    background: #fff;
+    color: #444;
+}
+
+.modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+.modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+}
+
+/* Screen Sizing */
+
+@media screen and (max-width: 450px) {
+    li {
+        display: block;
+    }
+
+    .menu a {
+      float: none;
+      width: 100%;
+    }
+
+    .columns p, h2{
+        font-size: 3vw !important;
+    }
+
+    .columns h1{
+        font-size: 4vw;
+    }
+    
+    .scaling-class p, h1, h2 {
+        font-size: 20px;
+    }
+
+    img{
+        width: 200px;
+        height: auto;
+    }
+
+    section{
+        height: 15vh;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body p {
+        font-size: 26px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 32px;
+    }
+}

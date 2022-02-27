@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--JavaScript React-->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--- Font --->
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <title>Presentation</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a class="current" href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="CareerGoals.html">Mål</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="root">
+        <main class="scaling-class">
+            <article>
+                <h1>Projekt</h1>
+                <h2>Alarmklocka</h2>
+                <!-- Modal-Popup -->
+                <p>Om du vill läsa mer <a href="#open-modal" data-model-target="#open-modal" id="modal-popup">tryck här</a></p>
+                <div id="open-modal" class="modal-window">
+                    <div>
+                        <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                        <h1>Alarmklocka</h1>
+                        <div>Det är ett program som man kan ställa både tid och 2 olika alarm,
+                            den använder både ljud och bild.
+                        </div>
+                    </div>
+                </div>
+                <p>Ett program som man kan ställa klocka och 2 olika alarm.</p>
+                <img src="ClockAlarm.jpg" alt="A Picture of the alarmclock program">
+            </article>
+            <article id="root-article"></article>
+            <img src="HangmanGamePic.png" alt="A picture of a hangmangame, almost complete">
+            <button data-modal-target="#modal" hidden>hidden</button>
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <div class="title">You found the Easter Egg!</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    .. The number of the beast!
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </main>
+    </div>
+    <footer class="footer" id="footer" onclick="onClickEasterEgg('blue')">
+        Hello, this is my footer
+    </footer>
+    <script src="/src/App.js" type="text/babel"></script>
+    <script src="/src/EasterEggScript.js" type="text/javascript"></script>
+</body>
+</html>
