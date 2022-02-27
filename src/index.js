@@ -15,8 +15,7 @@ class App extends React.Component{
 }
 
 componentDidMount(){
-  const url = "http://api.github.com/users/FreddySoderberg/repos";
-  fetch(url)
+  fetch("https://api.github.com/users/FreddySoderberg/repos")
   .then((res) => res.json())
   .then((json)=>{
     this.setState({
